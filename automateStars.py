@@ -66,12 +66,6 @@ def clicker():
 
     sleep(30)
     driver.quit()
-# WebDriverWait(driver, TIMEOUT).until(element_present)
-#             input = driver.find_element_by_xpath("//input[@type='text' and @name='isaphishurl' and @value='http://']")
-#             input.clear()
-#             input.send_keys(url)
-#             driver.find_element_by_xpath("//input[@type='submit' and @class='submitbutton']").click()
-
 
 if __name__ == "__main__":
     init()
