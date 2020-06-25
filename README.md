@@ -1,6 +1,5 @@
 # ntu-automate-star-wars
 This script automates adding of courses into new NTU Stars system (so called star wars). Stars is based on first come first serve basis however more slots open up within the 3 hours as well. This script will ease your star wars. 
-*Developed by Ko Seoyoon in 2020 June*
 
 ## Functionality
 * **Automatically logs in and register courses**
@@ -45,3 +44,7 @@ To run this **without opening up chrome physically** (virtually carried out), ap
 ```
 python automateStars.py -bg
 ```
+
+## Author
+*Developed by Ko Seoyoon in 2020 June*
+Feel free to fork and develop it further. Please credit original author.
