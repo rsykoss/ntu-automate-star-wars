@@ -18,7 +18,7 @@ Please do prepare backup in cases there are failures and use at your own risk. P
 * pip
 * **MUST DO:** Kake sure all the cores or ger core or major pe that you need are **saved to plan 1 as default**. Try to remove UEs (Those need to choose ranks) 
 
-## set up
+## set up & run
 1. Clone or Fork or download this github
 2. Go to chrome settings and go to about chrome. Check chrome version
 3. Go [here](https://chromedriver.chromium.org/downloads) and download chrome driver with correct version
