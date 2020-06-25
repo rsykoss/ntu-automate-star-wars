@@ -1,3 +1,3 @@
-cd C:\Users\seoyo\ntu-automateStars
+pip install requirements.txt
 python automateStars.py
 pause

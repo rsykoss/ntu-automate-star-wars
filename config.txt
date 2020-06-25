@@ -1,0 +1,3 @@
+DRIVE = C:/Users/seoyo/Downloads/chromedriver.exe
+USERNAME = et0001van
+PASSWORD = 

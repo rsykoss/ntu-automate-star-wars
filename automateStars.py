@@ -15,22 +15,26 @@ options = Options()
 # options.add_experimental_option('useAutomationExtension', False)
 # options.add_argument("--headless")
 
-DRIVE = "C:/Users/seoyo/Downloads/chromedriver.exe"
-USERNAME = ""
-PASSWORD = ""
+key={}
+TIMEOUT = 20
 
-TIMEOUT = 60
+def init():
+    with open('config.txt') as f:
+        for line in f:
+            if line != "\n":
+                (k, val) = line.split("=", 1)
+                key[k.strip()] = val.strip()
 
 def clicker():
 
-    driver = webdriver.Chrome(executable_path=DRIVE, options=options)
+    driver = webdriver.Chrome(executable_path=key.get('DRIVE'), options=options)
     driver.get('https://wish.wis.ntu.edu.sg/pls/webexe/ldap_login.login?w_url=https://wish.wis.ntu.edu.sg/pls/webexe/aus_stars_planner.main')
     
     input = driver.find_element_by_id('UID')
-    input.send_keys(USERNAME)
+    input.send_keys(key.get('USERNAME'))
     driver.find_element_by_xpath("//input[@type='submit']").click()
     input = driver.find_element_by_id('PW')
-    input.send_keys(PASSWORD)
+    input.send_keys(key.get('PASSWORD'))
     driver.find_element_by_xpath("//input[@type='submit']").click()
 
 
@@ -70,5 +74,5 @@ def clicker():
 
 
 if __name__ == "__main__":
-
+    init()
     clicker()
