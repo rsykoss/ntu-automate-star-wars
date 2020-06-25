@@ -1,13 +1,22 @@
 # ntu-automate-star-wars
-This script is to automate adding classes rather than clicking. It was built on 25/06/2020 during my STARs (updated stars). Please make sure that the cores you want to add (by clicking continuously) is already saved as plan 1. This is recommeneded after the initial few presses which results in 'no more vacancy' and you have to continue to press to get it when it gets release in the 3 hours.
+This script automates adding of courses into new NTU Stars system (so called star wars). Stars is based on first come first serve basis however more slots open up within the 3 hours as well. This script will ease your star wars. 
+*Developed by Ko Seoyoon in 2020 June*
 
-**This was done by my sudden impulse and not perfect at all. I wanted to use selenium so that people can see what is happening and will still be within their control. I know selenium is slower than scraping but since I already was familiar with it I just used it.**
+## Functionality
+* **Automatically logs in and register courses**
+* When STARs log you out, it will automatically quit and log in again 
+* Continously clicks until registration begins
+* Only works for Cores or prescribed and NOT UE at this point of time since it will not choose but just add
 
+It will stop running only when all the courses have been registered (There are no courses saying "no more vacancies")
+
+## Warning
+Please do prepare backup in cases there are failures and use at your own risk. Please do not blame here for failure in getting courses. **Recommended to start using this like 15 minutes into STARs and there are no more vacancies at that point of time. But it can also be used from the start** This was developed in a very short time during my own STARs and it was an impulse decision to create this and it is not perfect at all.
 
 ## prerequisites
 * python
 * pip
-
+* **MUST DO:** Kake sure all the cores or ger core or major pe that you need are **saved to plan 1 as default**. Try to remove UEs (Those need to choose ranks) 
 
 ## set up
 1. Clone or Fork or download this github
@@ -21,12 +30,18 @@ USERNAME = ET0001
 PASSWORD = xxxx
 ```
 *no quotation is required
-6. Go to double click automateStars.bat
 
-If this doesn't work use this method:
-6. Open cmd and type in these:
+## Run 
+There are 2 ways to run. 
+#### A) Use batch file
+double click automateStars.bat file to run
+
+#### B) use cmd
 ```
 pip install -r requirements.txt
 python automateStars.py
 ```
-and the script should be running
+To run this **without opening up chrome physically** (virtually carried out), append argument `-bg` like shown below
+```
+python automateStars.py -bg
+```
